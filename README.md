@@ -1,3 +1,1 @@
-# Document-Tracking-System
-  Her kullanıcıya (hoca) ait bir ders
-  Her derse ait bir çok doküman
+Bu kısım projeyi hiç bilmeyen kişilere ön bilgi vermek adına yazılır. Burada yazılması gerekenler; projenin genel özellikleri, genel olarak proje sonunda ne çıkacak, projeyi oluşturan araçların neler olduğu gibi temel bilgilerdir.
