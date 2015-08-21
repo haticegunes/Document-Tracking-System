@@ -1,3 +1,7 @@
-Bu kısım projeyi hiç bilmeyen kişilere ön bilgi vermek adına yazılır. Burada yazılması gerekenler; projenin genel özellikleri, genel olarak proje sonunda ne çıkacak, projeyi oluşturan araçların neler olduğu gibi temel bilgilerdir.
+# Document-Tracking-System
 
-> Altyapı / Genel gibi konu başlıkları altında anlatım yapılabilir.
+### Altyapı
+ Back-end tarafında RoR, Front-end tarafında Material Design kullanılmıştır.
+ 
+### İçerik
+  Öğrencilerin kendilerine ait olan derslerinin dokumanlarına online ulaşılabileceği bir sistem geliştirilmiştir. Bu sistemde hem öğrentmenler hem öğrenciler için kolaylıklar sağlanması esas alınmıştır . Öğretmenler sisteme giriş yapıp kendi derslerinin dokümanlarını sisteme ekleyebileceği gibi, öğrencilerin de sisteme eklenen bu ders dokümanlarına istedikleri zaman kolaylıkla erişebileği bir platformdur. Sistem herkese açık olacak şekilde tasarlanmıştır. Sisteme döküman ekleme yetkisi sadece öğretmenlere aittir.
