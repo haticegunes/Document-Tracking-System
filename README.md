@@ -1,2 +1,3 @@
 # Document-Tracking-System
-First Project
+  Her kullanıcıya (hoca) ait bir ders
+  Her derse ait bir çok doküman
