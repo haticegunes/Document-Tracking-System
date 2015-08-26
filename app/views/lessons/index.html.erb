@@ -1,0 +1,6 @@
+<h1>Dersler</h1>
+<% @lessons.each do |lesson| %>
+	<br/><%=link_to lesson.name ,lesson_documents_path(lesson) %>
+	<%= lesson.week %>
+
+<% end %>

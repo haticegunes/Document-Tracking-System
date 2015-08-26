@@ -1,2 +1,4 @@
-<h1>Documents#edit</h1>
-<p>Find me in app/views/documents/edit.html.erb</p>
+<%=simple_form_for @document, url: lesson_document_path, method: :put do |f| %>
+<%=f.file_field :alan %>
+<%=f.submit "Kaydet" %>
+<%end %>
