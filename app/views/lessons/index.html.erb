@@ -1,6 +1,16 @@
-<h1>Dersler</h1>
-<% @lessons.each do |lesson| %>
-	<br/><%=link_to lesson.name ,lesson_documents_path(lesson) %>
-	<%= lesson.week %>
-
+<ul class="list-group">
+<h1 class="text-danger">Dersler</h1>
+<% if admin_signed_in? %>
+	<%= link_to " Ders Ekle", new_lesson_path, class: "label label-primary" %> <br>
 <% end %>
+	<% @lessons.each do |lesson| %>
+		<li class="list-group-item">
+			<br/><%=link_to lesson.name ,lesson_documents_path(lesson) %>
+			<%= lesson.week %>
+			<% if admin_signed_in? %>
+				<%= link_to " Sil", lesson_path(lesson), method: :delete, class: "label label-warning" %> <br>
+			<% end %>
+		</li>
+	<% end %>
+
+</ul>

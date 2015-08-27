@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+input.file-upload[type="file"] {
+    display: none;
+}

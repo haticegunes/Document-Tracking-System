@@ -1,6 +1,9 @@
-<h1> Dokümanlar </h1>
-<% @lesson.documents.each do |document| %>
-	<%=document.name %>
-	<%= document.description %>
-	
-<% end %>
+<ul class="list-group">
+	 Dokümanlar
+	<% @lesson.documents.each do |document| %>
+	<li class="list-group-item">
+		<%= document.name %>
+		<%= document.description %>
+	</li>
+	<% end %>
+</ul>

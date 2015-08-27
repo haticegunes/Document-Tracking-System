@@ -2,9 +2,13 @@ Rails.application.routes.draw do
 
   
   devise_for :admins
-  resources :lessons, only:[:index, :edit, :show] do
-      resources :documents
-    
+  resources :lessons do
+      resources :documents do
+        get :downlaod, on: :member
+      end
+  end
+  devise_scope :user do
+    delete "logout", to: "devise/sessions#destroy"
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,4 +1,9 @@
+<ul class="list-group">
 <%=simple_form_for @document, url: lesson_document_path, method: :put do |f| %>
-<%=f.file_field :alan %>
-<%=f.submit "Kaydet" %>
+<li class="list-group-item">
+	<label for="file-upload" class="btn btn-info">Dosya Yükle</label>
+	<%=f.file_field :alan, class: "file-upload" %> 
+	<%=f.submit "Kaydet", class: "btn btn-success" %>
+</li>
 <%end %>
+</ul>

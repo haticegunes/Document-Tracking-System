@@ -1,6 +1,18 @@
-<h1>Dokumanlar</h1>
-<% @documents.each do |document| %>
-	
-	<%= document.name %> - <%= link_to "yukle", edit_lesson_document_path(document.lesson,document) %> <br>
+<ul class="list-group">
+	<h1 class="text-danger">Dokumanlar</h1>
+	<% @documents.each do |document| %>
+		<li class="list-group-item">
+		<%= document.name %> -
+		<% if admin_signed_in? %>
+			<% if document.alan == nil %>
+				<%= link_to "yukle", edit_lesson_document_path(document.lesson,document), class: "label label-primary" %> <br>
+			<% else %>
+				<%= link_to "Güncelle", edit_lesson_document_path(document.lesson,document), class: "label label-primary" %> 
+				<%= link_to "Sil", lesson_document_path(document.lesson,document), method: :delete, class: "label label-warning" %>
+			<% end %>
+		<% end %>
 
-<% end %>
+	<%= link_to document.alan.file.identifier, downlaod_lesson_document_path(id: document.id)%>
+	</li>
+	<% end %>
+</ul>
