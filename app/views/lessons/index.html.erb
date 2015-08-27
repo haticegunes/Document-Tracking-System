@@ -1,17 +1,30 @@
 <ul class="list-group">
 <h2 class="text-danger">Dersler</h2>
-
-	<% @lessons.each do |lesson| %>
-		<li class="list-group-item">
-			<br/><%=link_to lesson.name ,lesson_documents_path(lesson) %>
-			<%= lesson.week %>
-			<% if admin_signed_in? %>
-				<%= link_to " Sil", lesson_path(lesson), method: :delete, class: "label label-warning" %> <br>
-			<% end %>
-		</li>
-	<% end %>
+	<table class="table table-striped">
+	      <thead>
+	        <tr>
+	          <th>NAME</th>
+	          <th>WEEK</th>
+	          <% if admin_signed_in? %>
+	        	<th>ADMIN</th>
+	          <% end %>
+	        </tr>
+	      </thead>
+	      <tbody>
+	      	<% @lessons.each do |lesson| %>
+		        <tr>
+		          <td><%=link_to lesson.name ,lesson_documents_path(lesson) %></td>
+		          <td><%= lesson.week %></td>
+		          <% if admin_signed_in? %>
+				<td><%= link_to " Sil", lesson_path(lesson), method: :delete, class: "label label-warning" %></td>
+			  <% end %>
+		        </tr>
+	        <% end %>
+	      </tbody>
+	 </table>
 	<br/>
 <% if admin_signed_in? %>
 	<%= link_to " Ders Ekle", new_lesson_path, class: "label label-primary" %> <br>
 <% end %>
 </ul>
+
