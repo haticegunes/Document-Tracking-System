@@ -4,6 +4,20 @@ class DocumentsController < ApplicationController
     @documents=Lesson.find(params[:lesson_id]).documents
   end
 
+  def new
+    @document = Document.new 
+  end
+
+  def create
+    @lesson = Lesson.find(params[:lesson_id])
+    @document = @lesson.documents.new(documents_params)
+    if @document.save
+      redirect_to lesson_documents_path
+    else
+      render :new 
+    end
+  end
+
   def edit
   end
 
@@ -16,13 +30,10 @@ class DocumentsController < ApplicationController
   end
 
   def update
-
-    @document.update(documents_params)
+    @document.update(upload_params)
     redirect_to lesson_documents_path()
   end
 
-  def create
-  end
 
   def downlaod
     send_file(@document.alan.path)
@@ -32,7 +43,10 @@ class DocumentsController < ApplicationController
   def set_params
     @document = Document.find(params[:id])
   end
-  def documents_params
+  def upload_params
     params.require(:document).permit(:alan)
+  end
+  def documents_params
+    params.require(:document).permit(:name, :description)
   end
 end

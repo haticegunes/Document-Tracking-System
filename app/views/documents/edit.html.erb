@@ -1,8 +1,10 @@
 <ul class="list-group">
+<p><b>Belge Adı :</b> <%=@document.name %></p>
+<p><b>Belge Açıklaması :</b> <%=@document.description %></p>
 <%=simple_form_for @document, url: lesson_document_path, method: :put do |f| %>
 <li class="list-group-item">
 	<label for="file-upload" class="btn btn-info">Dosya Yükle</label>
-	<%=f.file_field :alan, class: "file-upload" %> 
+	<%=f.file_field :alan, id: "file-upload", class: "file-upload" %> 
 	<%=f.submit "Kaydet", class: "btn btn-success" %>
 </li>
 <%end %>

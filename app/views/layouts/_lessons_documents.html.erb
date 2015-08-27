@@ -1,0 +1,19 @@
+ <div class="panel panel-default">
+  <div class="panel-heading">Sekmeler</div>
+  <div class="panel-body">
+    <ul>
+      <% Lesson.all.each do |lesson| %>
+      <li data-toggle="collapse" data-target="#doc<%= lesson.id %>" aria-expanded="false" aria-controls="collapseExample">
+        <%= lesson.name %>
+      </li>
+      <ul class="collapse" data-target="#doc<%= lesson.id %>" id="doc<%= lesson.id %>">
+        <% lesson.documents.each do |document| %>
+        <li>
+          <%= document.name %>
+        </li>
+        <% end %>
+      </ul>
+      <% end %>
+    </ul>
+  </div>
+</div>

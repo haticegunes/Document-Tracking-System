@@ -1,0 +1,5 @@
+<%= simple_form_for [:lesson, @document] do |f| %>
+  <%= f.input :name, label: 'Başlık' %>
+  <%= f.input :description, label: "İçerik",  placeholder: "Açıklama giriniz" %>
+  <%= f.button :submit, "Kaydet" %>
+<% end %>

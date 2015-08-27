@@ -16,10 +16,10 @@ class LessonsController < ApplicationController
       @lesson=Lesson.new
   end
 
- def create
+  def create
     @lesson = Lesson.new(lesson_params)
     if @lesson.save
-      redirect_to root_path, notice: "Kayıt Başarılı"
+      redirect_to root_path
     else
       render :new 
     end
