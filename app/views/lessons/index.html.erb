@@ -1,8 +1,6 @@
 <ul class="list-group">
-<h1 class="text-danger">Dersler</h1>
-<% if admin_signed_in? %>
-	<%= link_to " Ders Ekle", new_lesson_path, class: "label label-primary" %> <br>
-<% end %>
+<h2 class="text-danger">Dersler</h2>
+
 	<% @lessons.each do |lesson| %>
 		<li class="list-group-item">
 			<br/><%=link_to lesson.name ,lesson_documents_path(lesson) %>
@@ -12,5 +10,8 @@
 			<% end %>
 		</li>
 	<% end %>
-
+	<br/>
+<% if admin_signed_in? %>
+	<%= link_to " Ders Ekle", new_lesson_path, class: "label label-primary" %> <br>
+<% end %>
 </ul>
