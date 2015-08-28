@@ -1,10 +1,5 @@
 <ul class="list-group">
-<<<<<<< HEAD
 	<h2 class="text-danger">Dokümanlar</h2>
-=======
-	<h2 class="text-danger">Dokumanlar</h2>
->>>>>>> 80119b551d5936ec310b314d95dbdf6668c276b3
-	
 	<% @documents.each do |document| %>
 	<li class="list-group-item">
 		<%= document.name %> - <%= truncate(document.description,length: 30) %> 
@@ -24,15 +19,9 @@
 	</li>
 	<% end %>
 	<br/>
-<<<<<<< HEAD
 	<% if admin_signed_in? %>
 	<% if current_admin.role=="admin" %>
 		<%= link_to " Döküman Ekle", new_lesson_document_path, class: "label label-primary" %> <br>
 	<% end %>
 	<% end %>
-=======
-	<% if admin_signed_in? & current_admin.role=="admin" %>
-		<%= link_to " Döküman Ekle", new_lesson_document_path, class: "label label-primary" %> <br>
-	<% end %>
->>>>>>> 80119b551d5936ec310b314d95dbdf6668c276b3
 </ul>
