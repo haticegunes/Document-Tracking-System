@@ -1,5 +1,33 @@
 <%= simple_form_for [:lesson, @document] do |f| %>
-  <%= f.input :name, label: 'Başlık' %>
-  <%= f.input :description, label: "İçerik",  placeholder: "Açıklama giriniz" %>
-  <%= f.button :submit, "Kaydet" %>
+  
+	<div class="row">
+		<div class="form-group">
+			<label class="col-md-2 control-label" > Başlık </label>
+			<div class="col-md-5 ">
+					<%= f.input :name, required: true, label:false %>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="form-group">
+			<label class="col-md-2 control-label" > İçerik </label>
+			<div class="col-md-5 ">
+					<%= f.input :description,  placeholder: "Açıklama giriniz", label:false %>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="form-group">
+			<div class="col-md-5 col-md-offset-2">
+				<div class="actions">
+					<%= f.submit "Kaydet", :class=>"btn btn-primary" %>
+				</div>
+			</div>
+		</div>
+	</div>
 <% end %>
+
+

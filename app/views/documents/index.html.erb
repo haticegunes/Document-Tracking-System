@@ -1,22 +1,28 @@
 <ul class="list-group">
-	<h2 class="text-danger">Dokumanlar</h2>
-	<% if admin_signed_in? %>
-	<%= link_to " Döküman Ekle", new_lesson_document_path, class: "label label-primary" %> <br>
-	<% end %>
+	<h2 class="text-danger">Dokümanlar</h2>
+	
 	<% @documents.each do |document| %>
-		<li class="list-group-item">
+	<li class="list-group-item">
 		<%= document.name %> - <%= truncate(document.description,length: 30) %> 
-		<% if admin_signed_in? %>
-			<% if document.alan == nil %>
-				<%= link_to "yukle", edit_lesson_document_path(document.lesson,document), class: "label label-primary" %> <br>
-			<% else %>
-				<%= link_to "Güncelle", edit_lesson_document_path(document.lesson,document), class: "label label-primary" %> 
-				<%= link_to "Sil", lesson_document_path(document.lesson,document), method: :delete, class: "label label-warning" %>
+		<% if admin_signed_in?  %>
+			<% if  current_admin.role=="admin" %>
+				<% if document.alan == nil %>
+					<%= link_to "yukle", edit_lesson_document_path(document.lesson,document), class: "label label-primary" %> <br>
+				<% else %>
+					<%= link_to "Güncelle", edit_lesson_document_path(document.lesson,document), class: "label label-primary" %> 
+					<%= link_to "Sil", lesson_document_path(document.lesson,document), method: :delete, class: "label label-warning" %>
+				<% end %>
 			<% end %>
 		<% end %>
 		<% if document.alan.present? %>
 			<%= link_to document.alan.file.identifier, downlaod_lesson_document_path(id: document.id)%>
 		<% end %>
 	</li>
+	<% end %>
+	<br/>
+	<% if admin_signed_in? %>
+	<% if current_admin.role=="admin" %>
+		<%= link_to " Döküman Ekle", new_lesson_document_path, class: "label label-primary" %> <br>
+	<% end %>
 	<% end %>
 </ul>

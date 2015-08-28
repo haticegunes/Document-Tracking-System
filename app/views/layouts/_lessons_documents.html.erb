@@ -1,14 +1,19 @@
- <div class="panel panel-default">
-  <div class="panel-heading"><h4>Quick Access</h4></div>
+<div class="panel panel-default">
+  <div class="panel-heading text-danger">
+  <center><h4>Hızlı Erişim</h4></center>
+  
+  </div>
   <div class="panel-body">
-    <ul>
+    <ul class="ikon">
       <% Lesson.all.each do |lesson| %>
-      <li data-toggle="collapse" data-target="#doc<%= lesson.id %>" aria-expanded="false" aria-controls="collapseExample">
+      <li class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" 
+          data-toggle="collapse" data-target="#doc<%= lesson.id %>" 
+          aria-expanded="false" aria-controls="collapseExample">
         <%= lesson.name %>
       </li>
-      <ul class="collapse" data-target="#doc<%= lesson.id %>" id="doc<%= lesson.id %>">
+      <ul class="collapse ikon" data-target="#doc<%= lesson.id %>" id="doc<%= lesson.id %>">
         <% lesson.documents.each do |document| %>
-        <li>
+        <li class="glyphicon glyphicon-triangle-right" aria-hidden="true">
           <%= document.name %>
         </li>
         <% end %>

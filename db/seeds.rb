@@ -7,6 +7,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Admin.create(email:"hatice@hotmail.com",password:"12345678",password_confirmation:"12345678",role:"admin")
+
+
 Lesson.create(name:"Algoritmalar",week:"3 Hafta")
 Document.create(name:"Sıralama Algoritmaları", description:"Bir grup sayının küçükten büyüğe (veya tersine) doğru sıralanması işlemini yapan algoritmaları anlatan dokümandır.",lesson_id:1)
 Document.create(name:"Arama Algoritmaları", description:"Bilgisayar bilimlerinde, çeşitli veri yapılarının (data structures) üzerinde bir bilginin aranması sırasına kullanılan algoritmaların anlatıldığı dokümandır. Örneğin bir dosyada bir kelimenin aranması, bir ağaç yapısında (tree) bir düğümün (node) aranması veya bir dizi (array) üzerinde bir verinin aranması gibi durumlar bu algoritmaların çalışma alanlarına girer.",lesson_id:1)
