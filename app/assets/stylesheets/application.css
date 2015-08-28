@@ -23,7 +23,7 @@ input.file-upload[type="file"] {
 .string.optional {
 	width: 100%;
 }
+
 .string.required, .text.optional {
 	width: 143% !important;
 }
-
