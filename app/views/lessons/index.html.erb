@@ -3,10 +3,12 @@
 	<table class="table table-striped">
 	      <thead>
 	        <tr>
-	          <th>NAME</th>
-	          <th>WEEK</th>
+	          <th>ADI</th>
+	          <th>HAFTASI</th>
 	          <% if admin_signed_in? %>
-	        	<th>ADMIN</th>
+	          	<% if current_admin.role=="admin" %>
+	        		<th>YÖNETİCİ</th>
+	        	<%end%>
 	          <% end %>
 	        </tr>
 	      </thead>
@@ -15,16 +17,22 @@
 		        <tr>
 		          <td><%=link_to lesson.name ,lesson_documents_path(lesson) %></td>
 		          <td><%= lesson.week %></td>
+		          <td>
 		          <% if admin_signed_in? %>
-				<td><%= link_to " Sil", lesson_path(lesson), method: :delete, class: "label label-warning" %></td>
+		          	<% if current_admin.role=="admin"  %>
+						<%= link_to " Sil", lesson_path(lesson), method: :delete, class: "label label-warning" %>
+					<% end %>
 			  <% end %>
+			  </td>
 		        </tr>
 	        <% end %>
 	      </tbody>
 	 </table>
 	<br/>
 <% if admin_signed_in? %>
+	<% if current_admin.role=="admin"   %>
 	<%= link_to " Ders Ekle", new_lesson_path, class: "label label-primary" %> <br>
+	<% end %>
 <% end %>
 </ul>
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 <head>
   <title>DocumentTrackingSystem</title>
@@ -13,24 +13,24 @@
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Document Tracking System</a>
+      <a class="navbar-brand" href="<%= root_path %>">Doküman Takip Sistemi</a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" class="form-control" >
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default">Ara</button>
       </form>
       <form >
         <ul class="nav navbar-nav navbar-right">
           <div class="form-group">
             <% if admin_signed_in? %>
-            <%= current_admin.email %>
-            <%= link_to "Log out", destroy_admin_session_path, :method => :delete %>
+              <%= current_admin.email %>
+              <%= link_to "Çıkış Yap", destroy_admin_session_path, :method => :delete %>
             <% else %>
-            <%= link_to "Log in", new_admin_session_path %>
+              <%= link_to "Giriş Yap", new_admin_session_path %>
             <% end %>
           </div>
         </ul>
@@ -38,6 +38,8 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+
 
   <div class="container">
     <div class="row">
@@ -53,5 +55,14 @@
       </div> 
     </div>
   </div>
+
+  <div class="panel-footer">
+    <div class="text-center"> 
+      <b> Uzem Akademi 2015 </b>
+    </div>
+  </div>
+
 </body>
+
+
 </html>

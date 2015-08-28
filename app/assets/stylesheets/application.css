@@ -17,3 +17,9 @@
 input.file-upload[type="file"] {
     display: none;
 }
+.email input {
+	width: 590px !important;
+}
+.string.optional {
+	width: 100%;
+}
