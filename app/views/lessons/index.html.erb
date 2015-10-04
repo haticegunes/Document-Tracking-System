@@ -14,13 +14,16 @@
 	      </thead>
 	      <tbody>
 	      	<% @lessons.each do |lesson| %>
+
 		        <tr>
 		          <td><%=link_to lesson.name ,lesson_documents_path(lesson) %></td>
 		          <td><%= lesson.week %></td>
 		          <td>
 		          <% if admin_signed_in? %>
 		          	<% if current_admin.role=="admin"  %>
-						<%= link_to " Sil", lesson_path(lesson), method: :delete, class: "label label-warning" %>
+						<%= link_to " Sil", lesson_path(lesson), method: :delete, class: "label label-danger" %>
+						
+						<%= link_to "Düzenle", edit_lesson_path(lesson), class: "label label-warning" %> 
 					<% end %>
 			  <% end %>
 			  </td>

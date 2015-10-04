@@ -7,9 +7,10 @@
 			<% if  current_admin.role=="admin" %>
 				<% if document.alan == nil %>
 					<%= link_to "yukle", edit_lesson_document_path(document.lesson,document), class: "label label-primary" %> <br>
+
 				<% else %>
-					<%= link_to "Güncelle", edit_lesson_document_path(document.lesson,document), class: "label label-primary" %> 
-					<%= link_to "Sil", lesson_document_path(document.lesson,document), method: :delete, class: "label label-warning" %>
+					<%= link_to "Dosya Yükle", edit_lesson_document_path(document.lesson,document), class: "label label-success" %> 
+					<%= link_to "Sil", lesson_document_path(document.lesson,document), method: :delete, class: "label label-danger" %>
 				<% end %>
 			<% end %>
 		<% end %>

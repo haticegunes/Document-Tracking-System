@@ -27,3 +27,29 @@ input.file-upload[type="file"] {
 .string.required, .text.optional {
 	width: 143% !important;
 }
+.thumbnail{
+	width:100%;
+}
+
+body{
+	background-image: url(/assets/8.jpg);
+	background-repeat: repeat;
+    background-position: top;
+    color:#444;
+    background-color:#ccdbce;
+	}
+.container {
+	opacity: 0.89;
+}
+footer{
+	color: #eee;
+}
+.resim{
+	width: 45px;
+	height: 30px;
+}
+nav{
+	display: block;
+	color: #eee
+}
+

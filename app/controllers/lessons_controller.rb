@@ -31,6 +31,11 @@ class LessonsController < ApplicationController
     redirect_to root_path
   end
 
+  def update
+    @lesson.update(lesson_params)
+    redirect_to root_path
+  end
+
 
   private
 
