@@ -1,0 +1,65 @@
+/* Genel */
+.none-radius {
+	border-radius: 0 !important;
+}
+/* Genel SON */
+
+/* Fixed Content */
+.img-base--crop {
+    height: 235px;
+    overflow: hidden;
+}
+/* Fixed Content SON */
+
+.alticiz{
+	text-decoration: none !important;
+}
+
+.nav, .navbar-nav, .navbar-right{
+	padding-top: 18px;
+}
+
+.bosluk{
+	padding-top: 1px;
+	margin-bottom: 5px;
+}
+
+
+input.file-upload[type="file"] {
+    display: none;
+}
+.email input {
+	width: 590px !important;
+}
+.string.optional {
+	width: 100%;
+}
+
+.string.required, .text.optional {
+	width: 143% !important;
+}
+.thumbnail{
+	width:100%;
+}
+
+body{
+	background-image: url(/assets/8.jpg);
+    background-position: top;
+    color:#444;
+    background-color:#ccdbce;
+	}
+.container {
+	opacity: 0.89;
+}
+footer{
+	color: #eee;
+}
+.resim{
+	width: 45px;
+	height: 30px;
+	margin-right: 5px;
+}
+nav{
+	display: block;
+	color: #eee
+}

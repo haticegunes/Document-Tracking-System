@@ -11,10 +11,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
-<body >
+<body>
 
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse none-radius">
 <div class="container-fluid">
   <div class="container">
 
@@ -22,7 +22,7 @@
     <div class="navbar-header">
 
       <a class="navbar-brand"  href="<%= root_path %>"> 
-      <div>
+      <div class="bosluk">
       <%= image_tag("kitap.png", :class => "resim") %>
           DOKÜMAN TAKİP SİSTEMİ
       </div>
@@ -35,9 +35,9 @@
           <div class="form-group">
             <% if admin_signed_in? %>
               <%= current_admin.email %>
-              <%= link_to "Çıkış Yap", destroy_admin_session_path, :method => :delete %>
+              <%= link_to "Çıkış Yap", destroy_admin_session_path, :method => :delete, :class => "alticiz" %>
             <% else %>
-              <%= link_to "Giriş Yap", new_admin_session_path %>
+              <%= link_to "Giriş Yap", new_admin_session_path, :class => "alticiz" %>
             <% end %>
           </div>
         </ul>
@@ -65,7 +65,9 @@
     <div class="row">
       <div class="col-md-4">
         <div class="thumbnail">
-        <%= image_tag("1.jpg") %>          
+          <div class="img-base--crop">  
+            <%= image_tag("1.jpg", width: "100%") %>          
+          </div>
               <div class="caption text-center">
                 <h3>DENEMEKTEN KORKMA</h3>       
               </div>
@@ -74,7 +76,9 @@
 
       <div class="col-md-4">
         <div class="thumbnail">
-          <%= image_tag("q.jpg")%> 
+          <div class="img-base--crop">
+            <%= image_tag("q.jpg", width: "100%")%>
+          </div>
               <div class="caption text-center">
                 <h3>ASLA VAZGEÇME</h3>      
               </div>
@@ -83,7 +87,9 @@
 
       <div class="col-md-4">
         <div class="thumbnail">
-            <%= image_tag("o.jpg")%> 
+          <div class="img-base--crop">
+            <%= image_tag("o.jpg", width: "100%")%>
+          </div>
               <div class="caption text-center">
                 <h3>HEDEF BELİRLE</h3>    
               </div>

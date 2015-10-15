@@ -7,19 +7,15 @@
 
 	<div class="row">
 		<div class="form-group">
-			<label for="inputEmail" class="col-md-2 control-label" > Email </label>
-			<div class="col-md-5">
-				<%= f.input :email, required: false, label:false %>
-			</div>
+			<label for="exampleInputEmail1" class="col-md-2 control-label" > Email </label>
+				<%= f.input :email, required: false, label:false,placeholder: "Email", input_html: { id: "exampleInputEmail1", class: "form-control"} %>
 		</div>
 	</div>
 
 	<div class="row">
-		<div class="form-group">
-			<label for="inputPassword" class="col-md-2 control-label" > Parola </label>
-			<div class="col-md-5">
-				<%= f.input :password, required: false, label:false %>
-			</div>
+		<div class="form-inline">
+			<label for="exampleinputPassword" class="col-md-2 control-label" > Parola </label>
+				<%= f.input :password, required: false, label:false,placeholder: "Parola", input_html: { id: "exampleInputPassword3", class: "form-control"} %>
 		</div>
 	</div>
 

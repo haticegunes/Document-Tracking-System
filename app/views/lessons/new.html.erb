@@ -4,14 +4,14 @@
 		<div class="row">
 			<label class="col-md-2 control-label" > Ders Adı </label> 
 			<div class="col-md-5 ">
-				<%= f.input :name, required: true, label:false %>
+				<%= f.input :name, required: true, label:false, input_html: { class: "form-control"} %>
 			</div>
 		</div>
 
 		<div class="row">
 			<br/><label class="col-md-2 control-label" > Ders Haftası </label>
 			<div class="col-md-5 ">
-				<%= f.input :week,  placeholder: "Dersin kaç hafta verileceğini giriniz.", label:false %>
+				<%= f.input :week,  placeholder: "Dersin kaç hafta verileceğini giriniz.", label:false, input_html: { class: "form-control"} %>
 			</div>
 		</div>
 
