@@ -24,7 +24,7 @@ felsefesi ile harmanlayarak **Mobil**Açık isimli bir düşünce ortaya koyduk.
 
 ## Proje: Doküman Takip Sistemi
 
-Back-end tarafında RoR, Front-end tarafında Material Design kullanılmıştır.
+Back-end tarafında Ruby on Rails, Front-end tarafında Bootstrap kullanılmıştır.
 Bu repo Yazılım Kampında uygulama olarak kullanılacak bir sistemdir.
 
 ## Nedir Doküman Takip Sistemi?
