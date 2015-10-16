@@ -12,11 +12,12 @@
           data-toggle="collapse" data-target="#doc<%= lesson.id %>" 
           aria-expanded="false" aria-controls="collapseExample" cursor:pointer >
             <%= lesson.name %>
+          
           </li>
           <ul class="collapse ikon" data-target="#doc<%= lesson.id %>" id="doc<%= lesson.id %>">
             <% lesson.documents.each do |document| %>
               <li class="glyphicon glyphicon-triangle-right" aria-hidden="true">
-                <%= document.name %>
+                <%= link_to document.name , lesson_documents_path(document.lesson) %>
               </li>
             <% end %>
           </ul>

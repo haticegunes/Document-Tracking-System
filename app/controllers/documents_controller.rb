@@ -22,6 +22,7 @@ class DocumentsController < ApplicationController
   end
 
   def show
+    @lesson = Lesson.find(params[:lesson_id])
   end
 
   def destroy

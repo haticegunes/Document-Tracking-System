@@ -43,11 +43,12 @@ input.file-upload[type="file"] {
 }
 
 body{
-	background-image: url(/assets/8.jpg);
+	background-image: url(/assets/ş.jpg);
     background-position: top;
     color:#444;
     background-color:#ccdbce;
 	}
+	
 .container {
 	opacity: 0.89;
 }
@@ -61,5 +62,5 @@ footer{
 }
 nav{
 	display: block;
-	color: #eee
+	color: #eee;
 }

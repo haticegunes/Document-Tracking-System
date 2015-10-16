@@ -2,7 +2,7 @@
 	<h2 class="text-danger">Dokümanlar</h2>
 	<% @documents.each do |document| %>
 	<li class="list-group-item">
-		<%= document.name %> - <%= truncate(document.description,length: 30) %> 
+		<%= link_to document.name , lesson_document_path(document.lesson,document) %>  
 		<% if admin_signed_in?  %>
 			<% if  current_admin.role=="admin" %>
 				<% if document.alan == nil %>
