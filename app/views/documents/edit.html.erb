@@ -5,7 +5,8 @@
 <li class="list-group-item">
 	<label for="file-upload" class="btn btn-info">Seç</label>
 	<%=f.file_field :alan, id: "file-upload", class: "file-upload" %> 
-	<%=f.submit "Kaydet", class: "btn btn-success" %>
+	<%=f.submit "Kaydet", class: "btn btn-success" %> 
+	<%=  link_to "Geri", lesson_documents_path(), class: "btn btn-warning" %>
 </li>
 <%end %>
 </ul>

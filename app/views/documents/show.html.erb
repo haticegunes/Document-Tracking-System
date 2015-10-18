@@ -1,9 +1,11 @@
 <ul class="list-group">
-	 Dokümanlar
+	<h3> Dokümanlar </h3>
 	<% @lesson.documents.each do |document| %>
 	<li class="list-group-item">
 		<%= document.name %>
 		<%= document.description %>
 	</li>
-	<% end %>
+	<% end %> 
+
 </ul>
+<%=  link_to "Geri", lesson_documents_path(), class: "btn btn-warning" %>
